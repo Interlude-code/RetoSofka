@@ -1,16 +1,14 @@
 {
-    "nivel1": {
-        "Ciencia": [{
-            "pregunta": "Numero atomico del hidrogeno",
-            "opt1": "1",
-            "opt2": "2",
-            "opt3": "3",
-            "opt4": "4",
-            "respuesta": "opt1"
-        }],
-        "Arte": [],
-        "Geografia": [],
-        "Deporte": [],
-        "Historia": []
+    "1": {
+        "historia": [
+            {
+                "enunciado": "liliana es bonita?",
+                "opt1": "si",
+                "opt2": "no",
+                "opt3": "mas o menos",
+                "opt4": "no se",
+                "correcta": "si"
+            }
+        ]
     }
 }
