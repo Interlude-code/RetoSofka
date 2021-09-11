@@ -22,7 +22,7 @@ class Juego():
             print(jugadores)
 
     def imprimirPreguntas(self):
-        results=collection.find({"3":"historia"})
+        results=collection.find({})
         for preguntas in results:
             print(preguntas)
     
