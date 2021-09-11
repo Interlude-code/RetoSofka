@@ -1,7 +1,6 @@
 import json
 class Pregunta():
-    def __init__(self,nivel,categoria,enunciado,opt1,opt2,opt3,opt4,correcta):
-        self.nivel=nivel
+    def __init__(self,categoria,enunciado,opt1,opt2,opt3,opt4,correcta):
         self.categoria=categoria
         self.enunciado=enunciado
         self.opt1=opt1
@@ -16,25 +15,7 @@ class Pregunta():
 
 
 
-#preguntas={
-#    "nivel1":{ 
-#        "Ciencia":[
+#pregunta={
+#    "1":{ 
 #            {"pregunta":"Numero atomico del hidrogeno","opt1":'1',"opt2":"2","opt3":"3","opt4":"4","respuesta":"opt1"}
-#        ],
-#        "Arte":[
-#
-#        ],
-#        "Geografia":[
-#
-#        ],
-#        "Deporte":[
-#
-#        ],
-#        "Historia":[
-#
-#        ]
-#    
-#    }
-
-
 #}
