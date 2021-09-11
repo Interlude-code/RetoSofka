@@ -1,7 +1,8 @@
-import random
+
 from jugador import Jugador
 from juego import Juego
 from pregunta import Pregunta
+
 
 
 
@@ -29,7 +30,7 @@ def ingresarPregunta():
             opt3=input("Ingresa la opcion 3")
             opt4=input("Ingresa la opcion 4")
             correcta=input("Ingresa la opcion correcta")
-            pregunta=Pregunta(nivel,categoriasList[categoria],enunciado,opt1,opt2,opt3,opt4,correcta)
+            pregunta=Pregunta(nivel,categoriasList[categoria-1],enunciado,opt1,opt2,opt3,opt4,correcta)
             juego.agregarPregunta(pregunta)
             
         else:
@@ -38,7 +39,6 @@ def ingresarPregunta():
     else:
         print("nivel no existente ")
         return
-    
 
         
 
@@ -51,7 +51,8 @@ while True:
 1. Para iniciar una partida
 2. Ver estadisticas de jugadores
 3. Ingresar nuevas preguntas
-4. Para salir
+4. Imprimir preguntas
+5. Para salir
 ''')
     if opt== '1':
         nombre=input("Ingresa el nombre del participante: ")
@@ -63,4 +64,6 @@ while True:
     elif opt== '3':
        ingresarPregunta()
     elif opt== '4':
+       juego.imprimirPreguntas()
+    elif opt== '5':
        break

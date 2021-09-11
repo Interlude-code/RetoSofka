@@ -10,8 +10,9 @@ class Pregunta():
         self.opt4=opt4
         self.correcta=correcta  
    
-    def convertirPreguntaADiccionario(self):
-        diccionarioPreguntas={}
+    def __str__(self):
+        ver= self.enunciado
+        return ver
 
 
 
