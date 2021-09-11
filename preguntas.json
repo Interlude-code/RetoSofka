@@ -1,15 +1,9 @@
 {
-    "1": {
-        "historia": [
-            {
-                "enunciado": "liliana es bonita?",
-                "opt1": "si",
-                "opt2": "no",
-                "opt3": "mas o menos",
-                "opt4": "no se",
-                "correcta": "si"
-            }
-        ]
-    }
-    
+    "categoria": 1,
+    "enunciado": "1",
+    "opcion1": "1",
+    "opcion2": "1",
+    "opcion3": "1",
+    "opcion4": "1",
+    "correcta": "1"
 }
