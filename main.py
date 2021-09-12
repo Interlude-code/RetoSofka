@@ -45,7 +45,7 @@ while True:
 
         
     elif opt== '2':
-        juego.imprimirJugadores()
+        juego.recordJugadores()
     elif opt== '3':
        ingresarPregunta()
     elif opt== '4':
