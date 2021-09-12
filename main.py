@@ -1,32 +1,8 @@
 
 from jugador import Jugador
 from juego import Juego
-from pregunta import Pregunta
+from exportarCSV import exportToCsv
 
-
-
-
-def ingresarPregunta():
-    categoria=int(input('''Ingresa el numero correspondiente a la categoria de la pregunta
-    1.Categoria 1
-    2.Categoria 2
-    3.Categoria 3
-    4.Categoria 4
-    5.Categoria 5
-    '''))
-    if (categoria >= 1 and categoria <=5):
-        enunciado=input("Ingresa la pregunta ")
-        opt1=input("Ingresa la opcion 1 ")
-        opt2=input("Ingresa la opcion 2 ")
-        opt3=input("Ingresa la opcion 3 ")
-        opt4=input("Ingresa la opcion 4 ")
-        correcta=int(input("Ingresa el numero de la opción correcta "))
-        pregunta=Pregunta(categoria,enunciado,opt1,opt2,opt3,opt4,correcta)
-        juego.agregarPregunta(pregunta)
-            
-    else:
-        print("Categoria no existente ")
-        return
 
 juego=Juego()
 while True:
@@ -46,9 +22,14 @@ while True:
         
     elif opt== '2':
         juego.recordJugadores()
+        exportToCsv().reporteJugadores()
     elif opt== '3':
-       ingresarPregunta()
+       opt=int(input("Selecciona 1.Para imprimir por consola 2.Para imprimir en .csv"))
+       if (opt ==1):
+            juego.imprimirPreguntas()    
+       elif (opt==2):
+           exportToCsv().exportarPreguntasCsv
     elif opt== '4':
-       juego.imprimirPreguntas()
+       juego.ingresarPregunta()
     elif opt== '5':
        break

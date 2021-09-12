@@ -1,6 +1,7 @@
 import json
 from pymongo import MongoClient
 import random
+from pregunta import Pregunta
 
 cluster=MongoClient("mongodb+srv://interlude:Carlos15@cluster0.smza0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 db=cluster["banco_preguntas"]
@@ -15,10 +16,6 @@ class Juego():
         self.seleccionJugador=''
 
 
-    def agregarJugador(self,nuevoJugador):
-        self.jugadores.append(nuevoJugador)  
-
-
     def imprimirPreguntas(self):
         results=collection.find({})
         for preguntas in results:
@@ -27,7 +24,6 @@ class Juego():
 
     
     def agregarPregunta(self,pregunta):
-#        self.preguntas.append(pregunta)
         preguntaDict={"categoria":pregunta.categoria,"enunciado":pregunta.enunciado,"opcion1":pregunta.opt1,"opcion2":pregunta.opt2,"opcion3":pregunta.opt3,"opcion4":pregunta.opt4,"correcta":pregunta.correcta}
         collection.insert_one(preguntaDict)
 
@@ -91,7 +87,30 @@ Premio Ganado: '''+ str(jugadores["premioLogrado"])+'''$
 Nivel maximo alcanzado: '''+ str(jugadores["nivelAlcanzado"])
  )
 
+ 
 
+    def ingresarPregunta(self):
+        categoria=int(input('''
+Ingresa el numero correspondiente a la categoria de la pregunta
+1.Categoria 1
+2.Categoria 2
+3.Categoria 3
+4.Categoria 4
+5.Categoria 5
+'''))
+        if (categoria >= 1 and categoria <=5):
+            enunciado=input("Ingresa la pregunta ")
+            opt1=input("Ingresa la opcion 1 ")
+            opt2=input("Ingresa la opcion 2 ")
+            opt3=input("Ingresa la opcion 3 ")
+            opt4=input("Ingresa la opcion 4 ")
+            correcta=int(input("Ingresa el numero de la opción correcta "))
+            pregunta=Pregunta(categoria,enunciado,opt1,opt2,opt3,opt4,correcta)
+            self.agregarPregunta(pregunta)
+                
+        else:
+            print("Categoria no existente ")
+            return
 
 
 
@@ -104,10 +123,7 @@ Nivel maximo alcanzado: '''+ str(jugadores["nivelAlcanzado"])
 
 
 
-
-#for preguntas in preguntas2:
-#    if(preguntas["categoria"] ==2):
-#        print("hola")        
+  
         
         
         
