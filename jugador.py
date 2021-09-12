@@ -1,7 +1,7 @@
 class Jugador():
     def __init__(self,nombre):
         self.nombre=nombre
-        self.nivel=0
+        self.categoria=1
         self.acomulado=0
 
     def __str__(self):

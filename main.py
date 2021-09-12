@@ -20,7 +20,7 @@ def ingresarPregunta():
         opt2=input("Ingresa la opcion 2 ")
         opt3=input("Ingresa la opcion 3 ")
         opt4=input("Ingresa la opcion 4 ")
-        correcta=input("Ingresa la opcion correcta ")
+        correcta=int(input("Ingresa el numero de la opción correcta "))
         pregunta=Pregunta(categoria,enunciado,opt1,opt2,opt3,opt4,correcta)
         juego.agregarPregunta(pregunta)
             
@@ -41,7 +41,7 @@ while True:
     if opt== '1':
         nombre=input("Ingresa el nombre del participante: ")
         nuevoJugador=Jugador(nombre)
-        juego.agregarJugador(nuevoJugador)
+        juego.rondas(nuevoJugador)
 
         
     elif opt== '2':
