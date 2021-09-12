@@ -11,7 +11,7 @@ while True:
 1. Para iniciar una partida
 2. Ver estadisticas de jugadores
 3. Imprimir preguntas
-4. Ingresar nuevas preguntas 
+4. Admin
 5. Para salir
 ''')
     if opt== '1':
@@ -31,6 +31,9 @@ while True:
        elif (opt==2):
            exportToCsv().exportarPreguntasCsv()
     elif opt== '4':
-       juego.ingresarPregunta()
+       opt=int(input("1.Agregar una nueva pregunta 2.Salir :     "))
+       if (opt ==1):
+            juego.ingresarPregunta()    
+       
     elif opt== '5':
        break

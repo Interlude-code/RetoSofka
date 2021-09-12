@@ -8,8 +8,8 @@ players=db["record_jugadores"]
 
 class exportToCsv():
     def __init__(self):
-        self.bancoPreguntas=[]
-        self.bancoJugadores=[]
+        self.bancoPreguntas=[["Id","Categoria","Enunciado","opcion1","opcion2","opcion3","opcion4","Correcta"]]
+        self.bancoJugadores=[["Id","Nombre","NivelAlcanzado","PremioLogrado"]]
 
 
     def exportarPreguntasCsv(self):
