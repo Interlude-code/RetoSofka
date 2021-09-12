@@ -2,6 +2,7 @@
 
 
 Favor pasar a la rama master para visualizar el codigo
+Ejecutar el archivo main.py
 
 
 requisitos : 
