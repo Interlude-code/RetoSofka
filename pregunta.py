@@ -1,8 +1,5 @@
-import json
 
-
-
-
+#objeto pregunta
 class Pregunta():
     def __init__(self,categoria,enunciado,opt1,opt2,opt3,opt4,correcta):
         self.categoria=categoria

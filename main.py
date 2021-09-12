@@ -1,9 +1,14 @@
+#importacione de clases
 
+
+#para que este codigo funcione se debe tener instalado mongodb  y su dns
+#en la consola "python -m pip install pymongo"
+#en la consola "python -m pip install dnspython"
 from jugador import Jugador
 from juego import Juego
 from exportarCSV import exportToCsv
 
-
+#menu principal con opciones seleccionables segun el numero de la opcion deseeada
 juego=Juego()
 while True:
     juego.cargarDB()

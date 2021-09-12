@@ -7,3 +7,4 @@ class Jugador():
     def __str__(self):
         cadena = "nombre: "+ self.nombre + "  nivel: "+str(self.nivel) + "   acomulado: " + str(self.acomulado)
         return cadena
+ #objeto jugador
